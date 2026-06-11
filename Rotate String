@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        String goal = sc.next();
+        boolean ans = false;
+        if(s.length()==goal.length()){ 
+        
+        String temp = s + s;
+        if(temp.contains(goal)){
+            ans = true;
+        }
+        }
+        System.out.print(ans);
+    }
+}
