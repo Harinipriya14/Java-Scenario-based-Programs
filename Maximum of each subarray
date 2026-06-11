@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String arr[]=sc.nextLine().split(" ");
+        int k=sc.nextInt();
+        for(int i=0;i<=arr.length-k;i++){
+            int max = 0;
+            for(int j=i;j<i+k;j++){
+               int sum=Integer.parseInt(arr[j]);
+                if(sum>max){
+                    max = sum;
+                } 
+            }
+            System.out.print(max + " ");
+        }
+    }
+}
