@@ -1,0 +1,14 @@
+class Solution {
+    public String toLowerCase(String s) {
+        String str = "";
+        for(char ch:s.toCharArray()){
+            if(ch>='A'&&ch<='Z'){
+                str = str + (char)(ch+32);
+            }
+            else{
+                str = str + ch;
+            }
+        }
+        return str;
+    }
+}
