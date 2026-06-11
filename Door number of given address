@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int nb = sc.nextInt();
+        int arr[] = new int[nb];
+        int dn=-1;
+        for(int i=0;i<nb;i++){
+            arr[i]=sc.nextInt();
+        }
+        int ad = sc.nextInt();
+        for(int i=0;i<nb;i++){
+            if(arr[i]==ad){
+                dn=i;
+            }
+        }
+        if(dn>=0){
+        System.out.printf("Door Number is %03d-DN",dn);
+        }
+        else{
+            System.out.println(dn);
+        }
+    }
+}
