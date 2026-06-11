@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+       
+        ArrayList<String> expense=new ArrayList<>();
+        ArrayList<Integer> cost=new ArrayList<>();
+        String ch;
+        int n = 1;
+        int total=0;
+        while(n!=0)
+        {
+            ch=sc.next();
+            if(ch.equals("done"))
+            {
+                n=0;
+            }
+            else{
+                expense.add(ch);
+                cost.add(sc.nextInt());
+                
+            }
+        }
+        for(int i = 0;i<expense.size();i++){
+            total+=cost.get(i);
+        }
+        System.out.println("Total Expenses:"+total);
+        
+        for(int i=0;i<expense.size();i++)
+        {
+            System.out.println(expense.get(i)+" "+cost.get(i));
+        }
+    }
+}
