@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int narr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int d = sc.nextInt();
+        int count=0,sum=0;
+        System.out.print("The elements that are divisible by " + d + " is ");
+        for(int i=0;i<n;i++){
+            if(arr[i]%d==0){
+                narr[i]=arr[i];
+                sum+=narr[i];
+                System.out.print(narr[i]+" ");
+                count++;
+            }
+        }
+        System.out.println("");
+        System.out.println("The Count of the value that is divisible by "+d+" is "+count);
+        System.out.print("The Sum of value that is divisible by "+d+" is "+sum);
+               
+    }
+}
