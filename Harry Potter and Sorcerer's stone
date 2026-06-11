@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0,count = 0;
+        while(n!=0){
+            count++;
+            if(count==1){
+                sum = sum + (n%10);
+            }
+            if(count==3){
+                sum = sum + (n/10);
+            }
+            n=n/10;
+        }
+        System.out.println(sum);
+    }
+}
