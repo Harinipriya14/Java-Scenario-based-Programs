@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int M = sc.nextInt();
+        int N = sc.nextInt();
+        int cube;
+        int sum=0;
+        if(M<=N){
+        for(int i = M;i<=N;i++){
+            cube = i*i*i;
+            sum = sum + cube;
+        }
+        System.out.print(sum);
+        }
+        else{
+            System.out.print("M should be less than or equal to N");
+        }
+    }
+}
